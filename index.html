@@ -28,8 +28,41 @@
       -webkit-font-smoothing: antialiased;
       line-height: 1.5;
     }
+
+    /* Nav */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      border-bottom: 1px solid #e5e5e5;
+      position: sticky;
+      top: 0;
+      background: var(--white);
+      z-index: 100;
+    }
+
+    nav .nav-model {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    nav .nav-name {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
   </style>
 </head>
 <body>
+  <nav>
+    <span class="nav-model">RS3 8Y</span>
+    <span class="nav-name">Thomas</span>
+  </nav>
 </body>
 </html>
