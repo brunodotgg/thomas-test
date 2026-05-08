@@ -57,6 +57,47 @@
       text-transform: uppercase;
       color: var(--grey);
     }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(160deg, #111111 0%, #1c1c1c 60%, #2a1a1a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .hero-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+
+    .hero-headline {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--white);
+      letter-spacing: -0.02em;
+    }
+
+    .hero-rule {
+      width: 3rem;
+      height: 2px;
+      background: var(--red);
+      border: none;
+    }
   </style>
 </head>
 <body>
@@ -64,5 +105,12 @@
     <span class="nav-model">RS3 8Y</span>
     <span class="nav-name">Thomas</span>
   </nav>
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-badge">Audi RS3 8Y &middot; 2024</span>
+      <h1 class="hero-headline">Built to move.<br>Built for Thomas.</h1>
+      <hr class="hero-rule" />
+    </div>
+  </section>
 </body>
 </html>
