@@ -98,6 +98,56 @@
       background: var(--red);
       border: none;
     }
+
+    /* Specs */
+    .specs {
+      padding: 6rem 3rem;
+      background: var(--white);
+    }
+
+    .section-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-bottom: 3rem;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .spec-item {
+      padding: 2rem 0;
+      border-top: 1px solid #e5e5e5;
+      padding-right: 2rem;
+    }
+
+    .spec-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--red);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .spec-label {
+      margin-top: 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+
+    @media (max-width: 768px) {
+      .specs { padding: 4rem 1.5rem; }
+      .specs-grid { grid-template-columns: repeat(2, 1fr); }
+      .spec-item { padding-right: 1rem; }
+    }
   </style>
 </head>
 <body>
@@ -110,6 +160,39 @@
       <span class="hero-badge">Audi RS3 8Y &middot; 2024</span>
       <h1 class="hero-headline">Built to move.<br>Built for Thomas.</h1>
       <hr class="hero-rule" />
+    </div>
+  </section>
+  <section class="specs">
+    <p class="section-title">The Machine</p>
+    <div class="specs-grid">
+      <div class="spec-item">
+        <div class="spec-value">400</div>
+        <div class="spec-label">Horsepower</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-value">500</div>
+        <div class="spec-label">Nm torque</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-value">3.8s</div>
+        <div class="spec-label">0 – 100 km/h</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-value">290</div>
+        <div class="spec-label">km/h top speed</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-value">2.5L</div>
+        <div class="spec-label">5-cyl TFSI</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-value">AWD</div>
+        <div class="spec-label">Quattro</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-value">7-spd</div>
+        <div class="spec-label">S tronic</div>
+      </div>
     </div>
   </section>
 </body>
