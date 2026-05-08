@@ -212,6 +212,18 @@
     footer span {
       color: var(--red);
     }
+
+    /* Scroll animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(1.5rem);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
@@ -229,31 +241,31 @@
   <section class="specs">
     <p class="section-title">The Machine</p>
     <div class="specs-grid">
-      <div class="spec-item">
+      <div class="spec-item fade-in">
         <div class="spec-value">400</div>
         <div class="spec-label">Horsepower</div>
       </div>
-      <div class="spec-item">
+      <div class="spec-item fade-in">
         <div class="spec-value">500</div>
         <div class="spec-label">Nm torque</div>
       </div>
-      <div class="spec-item">
+      <div class="spec-item fade-in">
         <div class="spec-value">3.8s</div>
         <div class="spec-label">0 – 100 km/h</div>
       </div>
-      <div class="spec-item">
+      <div class="spec-item fade-in">
         <div class="spec-value">290</div>
         <div class="spec-label">km/h top speed</div>
       </div>
-      <div class="spec-item">
+      <div class="spec-item fade-in">
         <div class="spec-value">2.5L</div>
         <div class="spec-label">5-cyl TFSI</div>
       </div>
-      <div class="spec-item">
+      <div class="spec-item fade-in">
         <div class="spec-value">AWD</div>
         <div class="spec-label">Quattro</div>
       </div>
-      <div class="spec-item">
+      <div class="spec-item fade-in">
         <div class="spec-value">7-spd</div>
         <div class="spec-label">S tronic</div>
       </div>
@@ -262,12 +274,12 @@
   <section class="favorites">
     <p class="section-title">Why Thomas Loves It</p>
     <div class="favorites-grid">
-      <div class="fav-card">
+      <div class="fav-card fade-in">
         <div class="fav-number">3.8</div>
         <div class="fav-title">Speed</div>
         <p class="fav-tagline">Zero to 100 in 3.8 seconds. No excuses.</p>
       </div>
-      <div class="fav-card">
+      <div class="fav-card fade-in">
         <div class="fav-number">400</div>
         <div class="fav-title">Power</div>
         <p class="fav-tagline">400 horses. All four wheels. Always ready.</p>
@@ -277,5 +289,12 @@
   <footer>
     Thomas <span>&hearts;</span> RS3 8Y &middot; 2026
   </footer>
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach(e => e.isIntersecting && e.target.classList.add('visible')),
+      { threshold: 0.15 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
