@@ -148,6 +148,55 @@
       .specs-grid { grid-template-columns: repeat(2, 1fr); }
       .spec-item { padding-right: 1rem; }
     }
+
+    /* Favorites */
+    .favorites {
+      padding: 6rem 3rem;
+      background: var(--light);
+    }
+
+    .favorites-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .fav-card {
+      background: var(--white);
+      padding: 3rem;
+      border-top: 3px solid var(--red);
+    }
+
+    .fav-number {
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--red);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .fav-title {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .fav-tagline {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--grey);
+    }
+
+    @media (max-width: 768px) {
+      .favorites { padding: 4rem 1.5rem; }
+      .favorites-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -192,6 +241,21 @@
       <div class="spec-item">
         <div class="spec-value">7-spd</div>
         <div class="spec-label">S tronic</div>
+      </div>
+    </div>
+  </section>
+  <section class="favorites">
+    <p class="section-title">Why Thomas Loves It</p>
+    <div class="favorites-grid">
+      <div class="fav-card">
+        <div class="fav-number">3.8</div>
+        <div class="fav-title">Speed</div>
+        <p class="fav-tagline">Zero to 100 in 3.8 seconds. No excuses.</p>
+      </div>
+      <div class="fav-card">
+        <div class="fav-number">400</div>
+        <div class="fav-title">Power</div>
+        <p class="fav-tagline">400 horses. All four wheels. Always ready.</p>
       </div>
     </div>
   </section>
