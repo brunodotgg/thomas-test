@@ -61,6 +61,7 @@
     /* Hero */
     .hero {
       min-height: 100vh;
+      min-height: 100svh;
       background: linear-gradient(160deg, #111111 0%, #1c1c1c 60%, #2a1a1a 100%);
       display: flex;
       align-items: center;
@@ -121,9 +122,8 @@
     }
 
     .spec-item {
-      padding: 2rem 0;
+      padding: 2rem 2rem 2rem 0;
       border-top: 1px solid #e5e5e5;
-      padding-right: 2rem;
     }
 
     .spec-value {
@@ -144,6 +144,7 @@
     }
 
     @media (max-width: 768px) {
+      nav { padding: 1.25rem 1.5rem; }
       .specs { padding: 4rem 1.5rem; }
       .specs-grid { grid-template-columns: repeat(2, 1fr); }
       .spec-item { padding-right: 1rem; }
@@ -159,7 +160,6 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
-      margin-top: 3rem;
     }
 
     .fav-card {
@@ -224,7 +224,12 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in { opacity: 1; transform: none; transition: none; }
+    }
   </style>
+  <noscript><style>.fade-in { opacity: 1; transform: none; }</style></noscript>
 </head>
 <body>
   <nav>
